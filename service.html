@@ -2,79 +2,79 @@
 <html>
 
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/car.png" type="">
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="svg/car.svg" type="">
 
-  <title> AutoLustra </title>
+    <title> AutoLustra </title>
 
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
 
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
 
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-  <style>
-      body {
-          font-family: Arial, sans-serif;
-      }
+        /* Style for the popup background */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            z-index: 1000; /* Ensure popup is at the top layer */
+        }
 
-      /* Style for the popup background */
-      .popup {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-          z-index: 1000; /* Ensure popup is at the top layer */
-      }
+        /* Style for the popup content */
+        .popup-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+            z-index: 1001; /* Ensure popup content is above the faded background */
+        }
 
-      /* Style for the popup content */
-      .popup-content {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          padding: 20px;
-          background-color: #fff;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-          width: 300px;
-          text-align: center;
-          z-index: 1001; /* Ensure popup content is above the faded background */
-      }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 24px;
+        }
 
-      .close-btn {
-          position: absolute;
-          top: 10px;
-          right: 15px;
-          cursor: pointer;
-          font-size: 24px;
-      }
-
-          .close-btn:hover {
-              color: red;
-          }
-  </style>
+            .close-btn:hover {
+                color: red;
+            }
+    </style>
 
 </head>
 
@@ -160,8 +160,8 @@
                             <p>
                                 Full detailing encompasses a thorough interior and exterior cleaning, rejuvenation, and protection of a vehicle to restore its pristine condition.
                             </p>
-                            <a href="#" class="showPopup" data-popup="popup1">
-                                Read More
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#fullModal">
+                                Details
                             </a>
                         </div>
                         <div class="col img-box">
@@ -179,8 +179,8 @@
                             <p>
                                 Interior detailing involves a thorough cleaning and rejuvenation of a vehicle's inside surfaces and components.
                             </p>
-                            <a href="#" class="showPopup" data-popup="popup2">
-                                Read More
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#inModal">
+                                Details
                             </a>
                         </div>
                     </div>
@@ -192,8 +192,8 @@
                             <p>
                                 Mini detailing involves a basic yet thorough cleaning and touch-up of a vehicle's interior and exterior to enhance its appearance.
                             </p>
-                            <a href="#" class="showPopup" data-popup="popup3">
-                                Read More
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#miniModal">
+                                Details
                             </a>
                         </div>
                         <div class="col img-box">
@@ -211,8 +211,8 @@
                             <p>
                                 Machine polishing is a process that uses specialized equipment to buff and refine a vehicle's paintwork, enhancing its shine and removing minor imperfections
                             </p>
-                            <a href="#" class="showPopup" data-popup="popup4">
-                                Read More
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#machineModal">
+                                Details
                             </a>
                         </div>
                     </div>
@@ -220,137 +220,361 @@
             </div>
         </div>
         <!-- Popup Window 1 -->
-        <div id="popup1" class="popup">
-            <div class="popup-content rounded-lg" style="width:40%;">
-                <span class="close-btn">&times;</span>
-                <h2>Full Detailing Service List</h2>
-                <div class="row d-flex flex mt-5 bg-dark rounded-lg">
-                    <p style="color: white; text-align: left;" class="col border-right thick-border rounded-lg">
-                        Exterior
-                        <br>
-                        <br>
-                        1. Snow foam pre wash
-                        <br>
-                        <br>
-                        2. Decontamination (break dust, bug and tar removal)
-                        <br>
-                        <br>
-                        3. Two buckets method gentle hand wash
-                        <br>
-                        <br>
-                        4. Rim and Tyre clean and dress
-                        <br>
-                        <br>
-                        5. Machine polish
-                        <br>
-                        <br>
-                        6. Premium sealant wax
-                    </p>
-                    <p style="color: white; text-align: left;" class="col rounded-lg">
-                        Interior
-                        <br>
-                        <br>
-                        1. Full interior detail vacuum and Steam clean
-                        <br>
-                        <br>
-                        2. Formula spray, brush and wipe off the surface, panel and the corners
-                        <br>
-                        <br>
-                        3. A deep shampoo for the fabric seat and carpet - remove most odour and stain, and kill the germs.
-                        <br>
-                        <br>
-                        4. Leather seat clean and dress (if applicable)
-                        <br>
-                        <br>
-                        5. Windows and mirrors clean
-                        <br>
-                        <br>
-                        6. Internal trim and dashboard gloss and protection.
-                    </p>
+        <div class="modal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class=modal-header>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body ">
+                        <div class="row">
+                            <div class="serviec-content col">
+                                <h2 class="d-flex flex-column align-items-center" style="font-weight:800;">Full Detailing</h2>
+                                <div class="d-flex flex-column align-items-center">
+                                    <div>
+                                        From
+                                    </div>
+                                    <div style="font-weight:800; font-size:60px;">
+                                        $299
+                                    </div>
+
+                                </div>
+                                <div class="row mt-5">
+
+                                    <div class=" col d-flex flex-column">
+                                        <div style="font-weight:800;">Exterior</div>
+                                        <br />
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Snow foam pre wash
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Decontamination (break dust, bug and tar removal)
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Two buckets method gentle hand wash
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Rim and Tyre clean and dress
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Machine polish
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Premium sealant wax
+                                        </div>
+                                    </div>
+                                    <div class=" col d-flex flex-column">
+                                        <div style="font-weight:800;">Interior</div>
+                                        <br />
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Detail vacuum
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Steam clean
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Formula spray, brush and wipe off the surface, panel and the corners
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            A deep shampoo for the fabric seat and carpet - remove most odour and stain, and kill the germs.
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Leather seat clean and dress (if applicable)
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Windows and mirrors clean
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Internal trim and dashboard gloss and protection.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+           </div>
+
+            <!-- Popup Window 2 -->
+        <div class="modal fade" id="inModal" tabindex="-1" aria-labelledby="inModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class=modal-header>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body ">
+                     
+                            <div class="serviec-content col">
+                                <h2 class="d-flex flex-column align-items-center" style="font-weight:800;">Interior Detailing</h2>
+                                <div class="d-flex flex-column align-items-center">
+                                    <div>
+                                        From
+                                    </div>
+                                    <div style="font-weight:800; font-size:60px;">
+                                        $199
+                                    </div>
+
+                                </div>
+                                <div class="row mt-5">
+
+                                    <div class=" col d-flex flex-column">
+                                        <div style="font-weight:800;">Exterior</div>
+                                        <br />
+                                        <div>
+                                            <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                            Snow foam pre wash
+                                        </div>
+                                        <div>
+                                            <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                            Decontamination (break dust, bug and tar removal)
+                                        </div>
+                                        <div>
+                                            <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                            Two buckets method gentle hand wash
+                                        </div>
+                                        <div>
+                                            <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                            Rim and Tyre clean and dress
+                                        </div>
+                                        <div>
+                                            <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                            Machine polish
+                                        </div>
+                                        <div>
+                                            <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                            Premium sealant wax
+                                        </div>
+                                    </div>
+                                    <div class=" col d-flex flex-column">
+                                        <div style="font-weight:800;">Interior</div>
+                                        <br />
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Detail vacuum
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Steam clean
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Formula spray, brush and wipe off the surface, panel and the corners
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            A deep shampoo for the fabric seat and carpet - remove most odour and stain, and kill the germs.
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Leather seat clean and dress (if applicable)
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Windows and mirrors clean
+                                        </div>
+                                        <div>
+                                            <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                            Internal trim and dashboard gloss and protection.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
                 </div>
             </div>
         </div>
+            <!-- Popup Window 3 -->
+        <div class="modal fade" id="miniModal" tabindex="-1" aria-labelledby="miniModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class=modal-header>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body ">
+                        <div class="serviec-content col">
+                            <h2 class="d-flex flex-column align-items-center" style="font-weight:800;">Mini Detailing</h2>
+                            <div class="d-flex flex-column align-items-center">
+                                <div>
+                                    From
+                                </div>
+                                <div style="font-weight:800; font-size:60px;">
+                                    $139
+                                </div>
 
-        <!-- Popup Window 2 -->
-        <div id="popup2" class="popup">
-            <div class="popup-content rounded-lg" style="width: 30vw;">
-                <span class="close-btn">&times;</span>
-                <h2>Interior Detailing Service List</h2>
-                <p style="color: white; text-align: left; height: 50vh;" class="bg-dark rounded-lg pl-3">
-                    <br>
-                    <br>
-                    1. Full interior detail vacuum and Steam clean
-                    <br>
-                    <br>
-                    2. Formula spray, brush and wipe off the surface, panel and the corners
-                    <br>
-                    <br>
-                    3. A deep shampoo for the fabric seat and carpet - remove most odour and stain, and kill the germs.
-                    <br>
-                    <br>
-                    4. Leather seat clean and dress (if applicable)
-                    <br>
-                    <br>
-                    5. Windows and mirrors clean
-                    <br>
-                    <br>
-                    6. Internal trim and dashboard gloss and protection.
-                </p>
+                            </div>
+                            <div class="row mt-5">
+
+                                <div class=" col d-flex flex-column">
+                                    <div style="font-weight:800;">Exterior</div>
+                                    <br />
+                                    <div>
+                                        <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                        Snow foam pre wash
+                                    </div>
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        Decontamination (break dust, bug and tar removal)
+                                    </div>
+                                    <div>
+                                        <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                        Two buckets method gentle hand wash
+                                    </div>
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        Rim and Tyre clean and dress
+                                    </div>
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        Machine polish
+                                    </div>
+                                    <div>
+                                        <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                        Premium sealant wax
+                                    </div>
+                                </div>
+                                <div class=" col d-flex flex-column">
+                                    <div style="font-weight:800;">Interior</div>
+                                    <br />
+                                    <div>
+                                        <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                        Detail vacuum
+                                    </div>
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        Steam clean
+                                    </div>
+                                    <div>
+                                        <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                        Formula spray, brush and wipe off the surface, panel and the corners
+                                    </div>
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        A deep shampoo for the fabric seat and carpet - remove most odour and stain, and kill the germs.
+                                    </div>
+                                    <div>
+                                        <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                        Leather seat clean and dress (if applicable)
+                                    </div>
+                                    <div>
+                                        <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                        Windows and mirrors clean
+                                    </div>
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        Internal trim and dashboard gloss and protection.
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                        </div>
+                </div>
             </div>
         </div>
-        <!-- Popup Window 3 -->
-        <div id="popup3" class="popup">
-            <div class="popup-content rounded-lg" style="width: 30vw;">
-                <span class="close-btn">&times;</span>
-                <h2>Mini Detailing Service List</h2>
-                <p style="color: white; text-align: left; height: 50vh;" class="bg-dark rounded-lg pl-3">
-                    <br>
-                    <br>
-                    1. Snow foam pre wash
-                    <br>
-                    <br>
-                    2. Two buckets method gentle hand wash
-                    <br>
-                    <br>
-                    3. Rim and Tyre clean and dress
-                    <br>
-                    <br>
-                    4. Full interior detail vacuum
-                    <br>
-                    <br>
-                    5. Formula spray, brush and wipe off the surface, panel and the corners
-                    <br>
-                    <br>
-                    6. Windows and mirrors clean
-                </p>
             </div>
-        </div>
 
-        <!-- Popup Window 4 -->
-        <div id="popup4" class="popup">
-            <div class="popup-content rounded-lg" style="width: 30vw;">
-                <span class="close-btn">&times;</span>
-                <h2>Machine Polishing Service List</h2>
-                <p style="color: white; text-align: left; height: 50vh;" class="bg-dark rounded-lg pl-3">
-                    <br>
-                    <br>
-                    1. Snow foam pre wash
-                    <br>
-                    <br>
-                    2. Decontamination (break dust, bug and tar removal)
-                    <br>
-                    <br>
-                    3. Two buckets method gentle hand wash
-                    <br>
-                    <br>
-                    4. Rim and Tyre clean and dress
-                    <br>
-                    <br>
-                    5. Machine polish
-                    <br>
-                    <br>
-                    6. Premium sealant wax
-                </p>
+            <!-- Popup Window 4 -->
+        <div class="modal fade" id="machineModal" tabindex="-1" aria-labelledby="machineModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class=modal-header>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body ">
+                        <div class="serviec-content">
+                            <h2 class="d-flex flex-column align-items-center" style="font-weight:800;">Machine Polishing</h2>
+                            <div class="d-flex flex-column align-items-center">
+                                <div>
+                                    From
+                                </div>
+                                <div style="font-weight:800; font-size:60px;">
+                                    $129
+                                </div>
+
+                            </div>
+                            <div class="row mt-5">
+
+                                <div class=" col d-flex flex-column">
+                                    <div style="font-weight:800;">Exterior</div>
+                                    <br />
+                                    <div>
+                                        <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                        Snow foam pre wash
+                                    </div>
+                                    <div>
+                                        <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                        Decontamination (break dust, bug and tar removal)
+                                    </div>
+                                    <div>
+                                        <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                        Two buckets method gentle hand wash
+                                    </div>
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        Rim and Tyre clean and dress
+                                    </div>
+                                    <div>
+                                        <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                        Machine polish
+                                    </div>
+                                    <div>
+                                        <svg fill="green" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
+                                        Premium sealant wax
+                                    </div>
+                                </div>
+                                <div class=" col d-flex flex-column">
+                                    <div style="font-weight:800;">Interior</div>
+                                    <br />
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        Detail vacuum
+                                    </div>
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        Steam clean
+                                    </div>
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        Formula spray, brush and wipe off the surface, panel and the corners
+                                    </div>
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        A deep shampoo for the fabric seat and carpet - remove most odour and stain, and kill the germs.
+                                    </div>
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        Leather seat clean and dress (if applicable)
+                                    </div>
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        Windows and mirrors clean
+                                    </div>
+                                    <div>
+                                        <svg fill="red" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                                        Internal trim and dashboard gloss and protection.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -421,20 +645,20 @@
                         </h4>
                         <div class="info_links">
                             <a class="active" href="index.html">
-                                <img src="images/nav-bullet.png" alt="">
+                           
                                 Home
                             </a>
                             <a class="" href="about.html">
-                                <img src="images/nav-bullet.png" alt="">
+                   
                                 About
                             </a>
                             <a class="" href="service.html">
-                                <img src="images/nav-bullet.png" alt="">
+                    
                                 Services
                             </a>
 
                             <a class="" href="contact.html">
-                                <img src="images/nav-bullet.png" alt="">
+                       
                                 Contact Us
                             </a>
                         </div>
@@ -468,47 +692,7 @@
     </script>
     <!-- custom js -->
     <script type="text/javascript" src="js/custom.js"></script>
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-    </script>
-    <!-- End Google Map -->
-    <script>
-        // Get all links that should show popups and all close buttons
-        var showLinks = document.querySelectorAll('.showPopup');
-        var closeBtns = document.querySelectorAll('.close-btn');
-        var popups = document.querySelectorAll('.popup');
-
-        // Function to show the popup
-        function showPopup(event) {
-            event.preventDefault();
-            var popupId = event.currentTarget.getAttribute('data-popup');
-            document.getElementById(popupId).style.display = 'block';
-        }
-
-        // Function to close the popup
-        function closePopup(event) {
-            popups.forEach(function (popup) {
-                popup.style.display = 'none';
-            });
-        }
-
-        // Assign event listener to each link
-        showLinks.forEach(function (link) {
-            link.addEventListener('click', showPopup);
-        });
-
-        // Assign event listener to each close button
-        closeBtns.forEach(function (btn) {
-            btn.addEventListener('click', closePopup);
-        });
-
-        // Close the popup when clicked outside
-        window.addEventListener('click', function (event) {
-            if (event.target.classList.contains('popup')) {
-                event.target.style.display = 'none';
-            }
-        });
-    </script>
+ 
 </body>
 
 </html>
