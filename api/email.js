@@ -36,7 +36,7 @@ module.exports = async (req, res) => {
             if (error) {
                 return res.status(500).send({ error: error.toString() });
             }
-            res.status(200).send({ message: 'Email sent successfully!' });
+            res.status(200).send({ message: 'Email sent successfully! We will reponse you ASAP' });
         });
     } else {
         res.status(405).send({ error: 'Only POST requests allowed.' });
