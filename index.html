@@ -579,7 +579,7 @@
             </div>
             <div class="row">
                 <div class="form_container contact-form container-fluid">
-                    <form class="form-row" id="emailForm" style="color: white;border-color: white;">
+                    <form method="post" class="form-row" id="emailForm" style="color: white;border-color: white;">
                         <div class="col border-right border-light">
                             <div>
                                 <label>Name</label>
@@ -760,7 +760,7 @@
             };
 
             // Send the data to your serverless function
-            fetch('/js/email.js', {
+            fetch('/api/email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
