@@ -21,7 +21,7 @@ module.exports = async (req, res) => {
             secure: false, 
             auth: {
                 user: 'autolustra@gmail.com', // Replace with your email
-                pass: '1164571045Zr!' // Replace with your email password
+                pass: 'spjw fmft rpvj qozd' // Replace with your email password
             }
         });
 
