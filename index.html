@@ -579,7 +579,7 @@
             </div>
             <div class="row">
                 <div class="form_container contact-form container-fluid">
-                    <form class="form-row" action="js/email.php" style="color: white;border-color: white;">
+                    <form class="form-row" id="emailForm" action="js/email.php" style="color: white;border-color: white;">
                         <div class="col border-right border-light">
                             <div>
                                 <label>Name</label>
@@ -622,7 +622,7 @@
                             </div>
 
                             <div class="btn_box text-right pt-5 pb-3">
-                                <button id="send_email" type="submit">
+                                <button id="sendEmail" type="submit">
                                     SEND
                                 </button>
                             </div>
@@ -744,6 +744,44 @@
     </script>
     <!-- custom js -->
     <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop the form from submitting the traditional way
+
+            // Collect form data
+            var formData = {
+                name: event.target.querySelector('[type="text"][placeholder="Jhon Smith"]').value,
+                phoneNumber: event.target.querySelector('[type="text"][placeholder="0422778754"]').value,
+                email: event.target.querySelector('[type="email"]').value,
+                location: event.target.querySelector('[type="text"][placeholder="Hobart location address"]').value,
+                carDetails: event.target.querySelector('[type="text"][placeholder="Mazda cx-7 2011"]').value,
+                service: event.target.querySelector('select').value,
+                condition: event.target.querySelector('textarea').value
+            };
+
+            // Send the data to your serverless function
+            fetch('/js/sendEmail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);
+                } else if (data.error) {
+                    alert('Error: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('There was an error with the fetch operation:', error);
+            });
+        });
+
+
+    </script>
 
 
 </body>
