@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
 
         let mailOptions = {
             from: 'autolustra@gmail.com', 
-            to: email, 
+            to: 'autolustra@gmail.com', 
             subject: 'New Customer Inquiry', 
             text: messageContent
         };
