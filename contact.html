@@ -41,6 +41,23 @@
 
         gtag('config', 'G-E264W0FNR1');
     </script>
+    <script>
+     // Helper function to delay opening a URL until a gtag event is sent.
+     // Call it in response to an action that should navigate to a URL.
+     function gtagSendEvent(url) {
+         var callback = function () {
+             if (typeof url === 'string') {
+                 window.location = url;
+             }
+         };
+         gtag('event', 'manual_conversion_REQUEST_QUOTE', {
+             'event_callback': callback,
+             'event_timeout': 2000,
+             // <event_parameters>
+         });
+         return false;
+     }
+    </script>
 </head>
 
 <body class="sub_page">
@@ -63,7 +80,7 @@
                                 Email autolustra@gmail.com
                             </span>
                         </a>
-                        
+
                     </div>
                 </div>
             </div>
@@ -158,7 +175,7 @@
                             </div>
 
                             <div class="btn_box text-right pt-5 pb-3">
-                                <button>
+                                <button id="sendEmail" type="submit" onclick="gtagSendEvent('')">
                                     SEND
                                 </button>
                             </div>
@@ -181,7 +198,7 @@
                             Address
                         </h4>
                         <div class="contact_link_box">
-                          
+
                             <a href="">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                                 <span>
@@ -230,20 +247,20 @@
                         </h4>
                         <div class="info_links">
                             <a class="active" href="index.html">
-                            
+
                                 Home
                             </a>
                             <a class="" href="about.html">
-                       
+
                                 About
                             </a>
                             <a class="" href="service.html">
-                      
+
                                 Services
                             </a>
 
                             <a class="" href="contact.html">
-                     
+
                                 Contact Us
                             </a>
                         </div>
@@ -260,7 +277,7 @@
         <div class="container">
             <p>
                 &copy; <span id="displayYear"></span> All Rights Reserved By
-                       <a href="https://html.design/">Auto Lustra</a>
+                <a href="https://html.design/">Auto Lustra</a>
             </p>
         </div>
     </section>
@@ -277,7 +294,44 @@
     </script>
     <!-- custom js -->
     <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop the form from submitting the traditional way
 
+            // Collect form data
+            var formData = {
+                name: event.target.querySelector('[type="text"][placeholder="Jhon Smith"]').value,
+                phoneNumber: event.target.querySelector('[type="text"][placeholder="0422778754"]').value,
+                email: event.target.querySelector('[type="email"]').value,
+                location: event.target.querySelector('[type="text"][placeholder="Hobart location address"]').value,
+                carDetails: event.target.querySelector('[type="text"][placeholder="Mazda cx-7 2011"]').value,
+                service: event.target.querySelector('select').value,
+                condition: event.target.querySelector('textarea').value
+            };
+
+            // Send the data to your serverless function
+            fetch('/api/email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);
+                } else if (data.error) {
+                    alert('Error: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('There was an error with the fetch operation:', error);
+            });
+        });
+
+
+    </script>
 
 </body>
 

@@ -72,6 +72,25 @@
 
         gtag('config', 'G-E264W0FNR1');
     </script>
+    <!-- Google tag (gtag.js) event - delayed navigation helper -->
+    <script>
+        // Helper function to delay opening a URL until a gtag event is sent.
+        // Call it in response to an action that should navigate to a URL.
+        function gtagSendEvent(url) {
+            var callback = function () {
+                if (typeof url === 'string') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'manual_conversion_REQUEST_QUOTE', {
+                'event_callback': callback,
+                'event_timeout': 2000,
+                // <event_parameters>
+            });
+            return false;
+        }
+    </script>
+
 </head>
 
 <body>
@@ -631,7 +650,7 @@
                             </div>
 
                             <div class="btn_box text-right pt-5 pb-3">
-                                <button id="sendEmail" type="submit">
+                                <button id="sendEmail" type="submit" onclick="gtagSendEvent('')">
                                     SEND
                                 </button>
                             </div>
