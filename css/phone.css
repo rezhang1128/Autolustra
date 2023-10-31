@@ -1,0 +1,54 @@
+@media only screen and (max-width: 600px) {
+    .service_compare{
+        display:flex;
+        flex-direction:column;
+    }
+    .first_service {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-row {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact_board{
+        border-right:solid;
+        border-width:1px;
+    }
+    .info_section {
+        margin-top: 10px;
+
+    }
+    .service_image{
+        display:none;
+    }
+    .service_content{
+        display:contents;
+        z-index:1000;
+        
+    }
+        .service_content::before {
+            content: '';
+            position: absolute;
+            z-index: 1000;
+        }
+    #full {
+        background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/full.jpg');
+        background-size: cover;
+    }
+    #interior {
+        background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/interior.jpg');
+        background-size: cover;
+    }
+    #mini {
+        background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/mini.jpg');
+        background-size: cover;
+    }
+    #polish {
+        background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/polish.jpg');
+        background-size: cover;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    
+}

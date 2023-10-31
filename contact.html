@@ -30,6 +30,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/phone.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
     <!-- Google tag (gtag.js) -->
@@ -42,21 +43,21 @@
         gtag('config', 'G-E264W0FNR1');
     </script>
     <script>
-     // Helper function to delay opening a URL until a gtag event is sent.
-     // Call it in response to an action that should navigate to a URL.
-     function gtagSendEvent(url) {
-         var callback = function () {
-             if (typeof url === 'string') {
-                 window.location = url;
-             }
-         };
-         gtag('event', 'manual_conversion_REQUEST_QUOTE', {
-             'event_callback': callback,
-             'event_timeout': 2000,
-             // <event_parameters>
-         });
-         return false;
-     }
+        // Helper function to delay opening a URL until a gtag event is sent.
+        // Call it in response to an action that should navigate to a URL.
+        function gtagSendEvent(url) {
+            var callback = function () {
+                if (typeof url === 'string') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'manual_conversion_REQUEST_QUOTE', {
+                'event_callback': callback,
+                'event_timeout': 2000,
+                // <event_parameters>
+            });
+            return false;
+        }
     </script>
 </head>
 
@@ -154,7 +155,7 @@
                                 <input type="text" placeholder="Hobart location address" />
                             </div>
                         </div>
-                        <div class="col pl-4">
+                        <div class="contact_board col">
                             <div>
                                 <label>Car Make, Model and Year</label>
                                 <input type="text" placeholder="Mazda cx-7 2011" />
